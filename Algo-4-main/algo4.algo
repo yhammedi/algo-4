@@ -1,0 +1,17 @@
+ALGORITHM Insertion Sort
+VAR
+    sorted_array:ARRAY_OF_INTEGER
+    i:INTEGER
+    n:INTEGER
+BEGIN
+  Read(n)
+  Read(sorted_array[0])
+  FOR i FROM 0 TO n STEP 1 DO
+      Read(sorted_array[i])
+      FOR j FROM i-1 TO 0 STEP -1  DO
+       IF (sorted_array[i]<sorted_array[j]) THEN
+           Swap(sorted_array[i],sorted_array[j])
+      END_FOR
+  END_FOR
+  Write(sorted_array)
+END
